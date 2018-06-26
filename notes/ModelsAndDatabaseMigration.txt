@@ -1,0 +1,28 @@
+Models and Database Migration  
+# PHP artisan commands 
+   php artisan make:controller Controllername - creates a blank new Controller 
+   php artisan make:controller Controllername --resource - creates a Controller with resource actions cool! 
+   php artisan make:model Modelname -m -creates a new model and add a migration file for it. 
+   php artisan migrate - creates a migration 
+   php artisan route:list - shows a list of your routes 
+  
+# Models 
+   up() 
+   {
+      .... method that holds the fields your table contains 
+      .... this is called when you want to run a Database migration command
+   }
+
+   down()
+   {
+       .... is called when you want to remove your migration 
+   }
+
+# Routes 
+  Route::resource("url_keyword","Controller"); - will automatically handle all the routes request
+
+# Tinker 
+  php artisan tinker - runs tinker cli 
+  $post = new App\Post();  - creates a new post object.
+  $post->field = 'value' - sets a value to a certain field. 
+  $post->save() = save the new value. 

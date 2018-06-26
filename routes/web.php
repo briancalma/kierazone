@@ -11,6 +11,15 @@
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
+
+Route::get('/','PagesController@index');
+Route::get('/index','PagesController@index');
+Route::get('/about','PagesController@about');
+Route::get('/services','PagesController@services');
+Route::get('/display_jitsi','PagesController@display_jitsi');
+Route::resource('post','PostsController');
