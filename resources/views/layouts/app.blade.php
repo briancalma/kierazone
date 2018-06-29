@@ -13,6 +13,7 @@
     <body>
         @include("includes.navbar")
         <div class="container">
+            @include("includes.flash")
             @yield("content")      
         </div>
     </body>

@@ -1,0 +1,22 @@
+# Laravel Collectives
+# Field Validations 
+  $this->validate(
+                    $requests,[
+                                'field' => 'Validations',
+                              ]
+                 );
+  - if this has an error an $error object is created 
+
+# Flash variables 
+  - session variables that i can use for display purposes 
+  1. $sucess - for success 
+  2. $error - for errors
+
+# Form Helper 
+# Saving data is like the tinker program 
+$post = new Model;
+$post->field = value;
+$post->save();
+
+# Redirection
+return redirect('url')->with('data',value);   - the cool thing about this is the success data session         

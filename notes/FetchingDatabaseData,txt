@@ -1,0 +1,27 @@
+# There is no need to configure your model, everything is on the Model Class
+
+# If you want to change your Model property you can do the following : 
+   > protected $table = 'New Table name';
+   > public $primaryKey = 'Your New Primary Key';
+   > public $timeStamps = true/false;  - When set to true will automatically create a timeStamp fields (created_at,modified_at);
+
+# Bringing your Model in the Controller :
+  use App\ModelName;
+  
+  > You can then call your Model name using the ModelName::function();
+
+# Fetching the Table data : 
+  > ModelName::all(); - get all the data and will return an array 
+  > ModelName::find($slug) - will get a specific data and return an array 
+  > ModelName::orderBy('field','asc/desc')->get(); - will get all the table data and will order them by provided field and option. Take note that you must include the get clause
+                                                   - for this query to run.
+  > ModelName::orderBy('field','asc/desc')->take(count)->get() - will get all the table data and will order them by provided field and option.
+                                                               - the take(count) clause is use to limit the return result 
+                                                               - and most of all you must use the get() clause to get all the result 
+  > ModelName::all()->paginate(count);  -   will paginate the return result 
+  > {{ ->links() }} - will display a link ;
+
+# If you want to use the SQL queries 
+  use DB;
+  DB::select('Your Query');
+
