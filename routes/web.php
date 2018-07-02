@@ -23,3 +23,5 @@ Route::get('/about','PagesController@about');
 Route::get('/services','PagesController@services');
 Route::get('/display_jitsi','PagesController@display_jitsi');
 Route::resource('post','PostsController');
+Auth::routes();
+Route::get('/dashboard', 'DashboardController@index');
